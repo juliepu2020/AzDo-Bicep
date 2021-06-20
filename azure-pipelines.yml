@@ -20,11 +20,12 @@ stages:
     - task: AzureCLI@2
       displayName: 'build bicep artifact'
       inputs:
-        azureSubscription: $(azureSubscription)
+        azureSubscription: 'az devops connection'
         scriptType: 'pscore'
         scriptLocation: 'inlineScript'
         inlineScript: 'az bicep build --file main.bicep'
-   
+    
+       
     - task: PublishBuildArtifacts@1
       displayName: 'Publish artifact in pipeline' 
       inputs:
