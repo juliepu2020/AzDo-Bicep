@@ -20,7 +20,7 @@ stages:
     - task: AzureCLI@2
       displayName: 'build bicep artifact'
       inputs:
-        azureSubscription: 'Visual Studio Enterprise Subscription(e6609160-2388-498b-aeeb-95ecd5e2e8ac)'
+        azureSubscription: $(azureSubscription)
         scriptType: 'pscore'
         scriptLocation: 'inlineScript'
         inlineScript: 'az bicep build --file main.bicep'
