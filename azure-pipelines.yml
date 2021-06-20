@@ -47,7 +47,7 @@ stages:
           - task: AzureCLI@2
             displayName: 'deploy bicep template'
             inputs:
-              azureSubscription: $(azureSubscription) 
+              azureSubscription: 'az devops connection' 
               scriptType: 'pscore'
               scriptLocation: 'inlineScript'
               inlineScript: |
