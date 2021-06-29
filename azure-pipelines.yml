@@ -30,12 +30,8 @@ stages:
       inputs:
          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
          ArtifactName: 'drop'
-    - task: PublishBuildArtifacts@1
-      inputs:
-        PathtoPublish: '$(Build.SourcesDirectory)'
-        ArtifactName: 'drop'
-        publishLocation: 'FilePath'
-        TargetPath: '\\pul1\test'
+         publishLocation: 'Container'
+ 
         
 
     - task: PublishBuildArtifacts@1
